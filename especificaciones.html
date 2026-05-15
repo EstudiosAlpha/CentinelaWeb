@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>Especificaciones técnicas | Centinela: Navegación Táctica</title>
+    <meta
+      name="description"
+      content="Formatos de mapas, rutas, waypoints, paquetes de datos, vídeo, sincronización y conexión con el ecosistema TAK en Centinela."
+    />
+    <meta property="og:title" content="Especificaciones técnicas de Centinela" />
+    <meta
+      property="og:description"
+      content="Compatibilidad técnica de mapas, rutas, waypoints, datos tácticos y ecosistema TAK."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/centinela-app-icon.png" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="icon" href="assets/images/centinela-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Navegación principal">
+        <a class="brand" href="index.html#inicio" aria-label="Centinela, inicio">
+          <img src="assets/images/centinela-app-icon.png" alt="" />
+          <span>Centinela</span>
+        </a>
+        <div class="nav-links">
+          <a href="index.html#herramientas">Herramientas</a>
+          <a href="index.html#tutoriales">Tutoriales</a>
+          <a href="index.html#plataformas">iPhone e iPad</a>
+          <a href="especificaciones.html" aria-current="page">Especificaciones</a>
+          <a href="index.html#contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="spec-hero" aria-labelledby="spec-title">
+        <canvas id="tactical-grid" class="tactical-grid" aria-hidden="true"></canvas>
+        <div class="hero-map" aria-hidden="true"></div>
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="shell spec-hero-layout">
+          <p class="eyebrow">Especificaciones técnicas</p>
+          <h1 id="spec-title">Compatibilidad operativa y formatos soportados</h1>
+          <p>
+            Resumen técnico para mapas, rutas, waypoints, sincronización, paquetes de datos,
+            vídeo y conexión con el ecosistema TAK.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="shell specs-grid">
+          <article class="spec-card">
+            <h2>Mapas</h2>
+            <dl>
+              <div><dt>Mapas base</dt><dd>Apple Maps, capas raster y capas vectoriales según configuración.</dd></div>
+              <div><dt>Offline</dt><dd>MBTiles, paquetes de teselas XYZ/TMS y cachés locales.</dd></div>
+              <div><dt>Servicios</dt><dd>WMS, WMTS y endpoints XYZ cuando el servidor lo permita.</dd></div>
+              <div><dt>Georreferenciados</dt><dd>GeoTIFF o raster calibrado mediante flujo de importación.</dd></div>
+            </dl>
+          </article>
+
+          <article class="spec-card">
+            <h2>Rutas y Waypoints</h2>
+            <dl>
+              <div><dt>Rutas</dt><dd>GPX, KML/KMZ y GeoJSON para importación/exportación.</dd></div>
+              <div><dt>Waypoints</dt><dd>GPX WPT, KML Placemark, GeoJSON Point y CSV estructurado.</dd></div>
+              <div><dt>Mediciones</dt><dd>Distancia, segmentos, etiquetas y referencias sobre mapa.</dd></div>
+              <div><dt>Dibujo</dt><dd>Líneas, polígonos, zonas, anotaciones y símbolos operativos.</dd></div>
+            </dl>
+          </article>
+
+          <article class="spec-card">
+            <h2>Ecosistema TAK</h2>
+            <dl>
+              <div><dt>Conexión</dt><dd>Preparado para integrarse con flujos TAK y servidores TAK compatibles.</dd></div>
+              <div><dt>Eventos</dt><dd>Intercambio táctico basado en entidades, posiciones, rutas y marcadores.</dd></div>
+              <div><dt>Datos</dt><dd>Paquetes de datos para compartir contexto operativo de forma estructurada.</dd></div>
+              <div><dt>Operación</dt><dd>Orientado a coordinación entre usuarios, contactos y elementos conectados.</dd></div>
+            </dl>
+          </article>
+
+          <article class="spec-card">
+            <h2>Misiones y datos</h2>
+            <dl>
+              <div><dt>Misiones</dt><dd>Agrupación de capas, rutas, waypoints, contactos, dibujos y recursos.</dd></div>
+              <div><dt>Exportación</dt><dd>Paquetes comprimidos para intercambio y respaldo operativo.</dd></div>
+              <div><dt>Importación</dt><dd>Archivos locales, recursos compartidos y datos preparados por misión.</dd></div>
+              <div><dt>Organización</dt><dd>Separación por operación para mantener contexto y trazabilidad.</dd></div>
+            </dl>
+          </article>
+
+          <article class="spec-card">
+            <h2>Vídeo, chat y contactos</h2>
+            <dl>
+              <div><dt>Vídeo</dt><dd>Capturas verticales, archivos MP4 y enlaces externos según despliegue.</dd></div>
+              <div><dt>Chat</dt><dd>Mensajería operativa asociada al entorno de misión.</dd></div>
+              <div><dt>Contactos</dt><dd>Gestión de usuarios, equipos y elementos conectados.</dd></div>
+              <div><dt>Estado</dt><dd>Indicadores de conexión y última posición reportada.</dd></div>
+            </dl>
+          </article>
+
+          <article class="spec-card">
+            <h2>Plataformas</h2>
+            <dl>
+              <div><dt>Dispositivos</dt><dd>iPhone e iPad.</dd></div>
+              <div><dt>Sistema</dt><dd>iOS/iPadOS, con permisos de ubicación según uso operativo.</dd></div>
+              <div><dt>Uso en campo</dt><dd>Interfaz táctil para consulta rápida, medición y edición sobre mapa.</dd></div>
+              <div><dt>Despliegue</dt><dd>Preparada para App Store y distribución según perfil operativo.</dd></div>
+            </dl>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div class="shell">
+          <p class="eyebrow">Documentación técnica</p>
+          <h2>Formatos y compatibilidad preparados para operación real</h2>
+          <a class="button button-primary" href="index.html#inicio">Volver a la landing</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacto">
+      <div class="shell footer-grid">
+        <div>
+          <strong>Centinela: Navegación Táctica</strong>
+          <p>© <span id="copyright-year"></span> Centinela. Todos los derechos reservados.</p>
+        </div>
+        <nav aria-label="Enlaces de pie de página">
+          <a href="index.html#tutoriales">Tutoriales</a>
+          <a href="index.html#herramientas">Herramientas</a>
+          <a href="especificaciones.html">Especificaciones</a>
+          <a href="#">Privacidad</a>
+          <a href="mailto:contacto@example.com">Contacto</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

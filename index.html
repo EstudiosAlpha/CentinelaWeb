@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>Centinela: Navegación Táctica | App iOS para iPhone e iPad</title>
+    <meta
+      name="description"
+      content="Centinela es una app iOS de navegación táctica para mapas, rutas, waypoints, misiones, contactos, coordinación sobre el terreno e integración con el ecosistema TAK."
+    />
+    <meta property="og:title" content="Centinela: Navegación Táctica" />
+    <meta
+      property="og:description"
+      content="Navegación digital avanzada para operaciones, rutas y coordinación sobre el terreno."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/centinela-app-icon.png" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="icon" href="assets/images/centinela-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Navegación principal">
+        <a class="brand" href="#inicio" aria-label="Centinela, inicio">
+          <img src="assets/images/centinela-app-icon.png" alt="" />
+          <span>Centinela</span>
+        </a>
+        <div class="nav-links">
+          <a href="#herramientas">Herramientas</a>
+          <a href="#tutoriales">Tutoriales</a>
+          <a href="#plataformas">iPhone e iPad</a>
+          <a href="#contacto">Contacto</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" id="inicio" aria-labelledby="hero-title">
+        <canvas id="tactical-grid" class="tactical-grid" aria-hidden="true"></canvas>
+        <div class="hero-map" aria-hidden="true"></div>
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="shell hero-layout">
+          <div class="hero-copy reveal">
+            <p class="eyebrow">App iOS de navegación táctica</p>
+            <h1 id="hero-title">Centinela: Navegación Táctica</h1>
+            <p class="hero-lead">
+              Navegación digital avanzada para operaciones, rutas, coordinación sobre el terreno
+              y conexión con el ecosistema TAK.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#herramientas">Ver herramientas</a>
+              <a class="button button-secondary" href="#tutoriales">Ver tutoriales</a>
+            </div>
+          </div>
+
+          <div class="hero-device reveal" aria-label="Vista de Centinela en iPhone">
+            <div class="iphone iphone-large">
+              <div class="iphone-screen screenshot-screen">
+                <video
+                  class="hero-video"
+                  muted
+                  playsinline
+                  autoplay
+                  loop
+                  preload="metadata"
+                  aria-label="Vídeo de la app Centinela reproduciéndose en bucle"
+                >
+                  <source src="assets/videos/Timeline 1.mov" type="video/quicktime" />
+                  Tu navegador no admite este vídeo.
+                </video>
+                <div class="screenshot-fallback">
+                  <span data-icon="video"></span>
+                  <strong>El vídeo no está disponible</strong>
+                  <small>Comprueba que el archivo assets/videos/Timeline 1.mov existe o usa un navegador compatible.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section intro" aria-labelledby="intro-title">
+        <div class="shell section-grid">
+          <div class="section-copy reveal">
+            <p class="eyebrow">Qué es Centinela</p>
+            <h2 id="intro-title">Mapa, coordinación y herramientas en una sola interfaz</h2>
+            <p>
+              Centinela es una app de navegación táctica para iPhone e iPad pensada para planificar,
+              visualizar y coordinar información sobre mapas digitales. Permite trabajar con rutas,
+              waypoints, capas, contactos, misiones y paquetes de datos desde una interfaz directa,
+              preparada para conectarse con flujos del ecosistema TAK cuando la operación lo requiera.
+            </p>
+          </div>
+          <div class="app-panel reveal">
+            <img src="assets/images/centinela-app-icon.png" alt="Icono de la app Centinela" />
+            <div>
+              <strong>Centinela</strong>
+              <span>Navegación táctica iOS</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tools" id="herramientas" aria-labelledby="tools-title">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Herramientas</p>
+            <h2 id="tools-title">Las funciones principales de la app</h2>
+          </div>
+
+          <div class="tool-grid">
+            <article class="tool-card reveal">
+              <span data-icon="map"></span>
+              <h3>Mapas</h3>
+              <p>Visualiza y trabaja sobre mapas digitales adaptados a la navegación táctica.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="layers"></span>
+              <h3>Capas</h3>
+              <p>Activa o desactiva información adicional sobre el terreno según tus necesidades.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="record"></span>
+              <h3>Grabar</h3>
+              <p>Registra tus desplazamientos y guarda recorridos para analizarlos o repetirlos.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="routes"></span>
+              <h3>Rutas</h3>
+              <p>Planifica trazados y referencias para moverte con mayor control.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="waypoint"></span>
+              <h3>Waypoints</h3>
+              <p>Marca puntos clave sobre el mapa para navegación, referencia o coordinación.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="draw"></span>
+              <h3>Dibujar</h3>
+              <p>Traza líneas, zonas, símbolos o anotaciones directamente sobre el mapa.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="measure"></span>
+              <h3>Medir</h3>
+              <p>Calcula distancias y referencias de forma rápida sobre el terreno.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="video"></span>
+              <h3>Video</h3>
+              <p>Accede a funciones de vídeo para mejorar la observación y el seguimiento.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="sync"></span>
+              <h3>Misiones Sync</h3>
+              <p>Mantén la información de misión alineada entre usuarios y dispositivos.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="contacts"></span>
+              <h3>Contactos</h3>
+              <p>Gestiona contactos y elementos conectados dentro del entorno de navegación.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="chat"></span>
+              <h3>Chat</h3>
+              <p>Comunica información relevante entre usuarios durante la operación.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="package"></span>
+              <h3>Paquete Datos</h3>
+              <p>Prepara y comparte conjuntos de información táctica de forma estructurada, incluyendo flujos compatibles con TAK.</p>
+            </article>
+            <article class="tool-card reveal">
+              <span data-icon="medevac"></span>
+              <h3>MEDEVAC</h3>
+              <p>Formulario rápido para evacuación médica y transmisión de información crítica.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section tutorials" id="tutoriales" aria-labelledby="tutorials-title">
+        <div class="shell">
+          <div class="section-heading reveal">
+            <p class="eyebrow">Tutoriales</p>
+            <h2 id="tutorials-title">Videotutoriales dentro de un iPhone</h2>
+            <p>
+              Los vídeos están preparados para capturas verticales de iPhone. Cambia los enlaces
+              `data-video` por YouTube, Vimeo o archivos MP4 reales.
+            </p>
+          </div>
+
+          <div class="tutorial-layout">
+            <div class="iphone tutorial-phone reveal" aria-label="Maqueta de iPhone para tutoriales">
+              <div class="iphone-screen tutorial-screen" id="tutorial-preview">
+                <div class="tutorial-placeholder">
+                  <span data-icon="video"></span>
+                  <strong>Selecciona un tutorial</strong>
+                  <small>El vídeo se reproducirá con formato vertical dentro del iPhone.</small>
+                </div>
+              </div>
+            </div>
+
+            <div class="tutorial-list">
+              <!-- TODO: Sustituye data-video por los enlaces reales de YouTube, Vimeo o MP4. -->
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Cómo crear un waypoint"
+                data-description="Aprende a marcar puntos clave sobre el mapa y usarlos como referencia operativa."
+                data-video="assets/videos/tutorial-waypoint-placeholder.mp4"
+              >
+                <span data-icon="waypoint"></span>
+                <strong>Cómo crear un waypoint</strong>
+                <small>Marca posiciones clave con precisión.</small>
+                <em>Mostrar en iPhone</em>
+              </button>
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Cómo grabar una ruta"
+                data-description="Registra desplazamientos y guarda recorridos para consultarlos más tarde."
+                data-video="assets/videos/tutorial-ruta-placeholder.mp4"
+              >
+                <span data-icon="record"></span>
+                <strong>Cómo grabar una ruta</strong>
+                <small>Controla cada tramo de tu recorrido.</small>
+                <em>Mostrar en iPhone</em>
+              </button>
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Cómo usar capas de mapa"
+                data-description="Gestiona información adicional del terreno desde la vista de navegación."
+                data-video="assets/videos/tutorial-capas-placeholder.mp4"
+              >
+                <span data-icon="layers"></span>
+                <strong>Cómo usar capas de mapa</strong>
+                <small>Activa información táctica cuando la necesites.</small>
+                <em>Mostrar en iPhone</em>
+              </button>
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Cómo crear una misión"
+                data-description="Agrupa rutas, contactos, capas y puntos dentro de una operación."
+                data-video="assets/videos/tutorial-mision-placeholder.mp4"
+              >
+                <span data-icon="sync"></span>
+                <strong>Cómo crear una misión</strong>
+                <small>Ordena cada operación desde el inicio.</small>
+                <em>Mostrar en iPhone</em>
+              </button>
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Cómo usar MEDEVAC"
+                data-description="Prepara información crítica de evacuación médica de forma rápida."
+                data-video="assets/videos/tutorial-medevac-placeholder.mp4"
+              >
+                <span data-icon="medevac"></span>
+                <strong>Cómo usar MEDEVAC</strong>
+                <small>Completa datos críticos con rapidez.</small>
+                <em>Mostrar en iPhone</em>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section platforms" id="plataformas" aria-labelledby="platforms-title">
+        <div class="shell section-grid section-grid-reverse">
+          <div class="platform-devices reveal">
+            <div class="ipad-mini">
+              <div class="app-map-screen"></div>
+            </div>
+            <div class="iphone iphone-small">
+              <div class="iphone-screen app-map-screen"></div>
+            </div>
+          </div>
+          <div class="section-copy reveal">
+            <p class="eyebrow">Disponible en iPhone e iPad</p>
+            <h2 id="platforms-title">Optimizada para consultar y planificar</h2>
+            <p>
+              En iPhone, Centinela prioriza acceso rápido a mapa, ubicación, waypoints y herramientas.
+              En iPad, ofrece más espacio para revisar capas, rutas y datos de misión.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="final-cta" aria-labelledby="cta-title">
+        <div class="shell reveal">
+          <img src="assets/images/centinela-app-icon.png" alt="" />
+          <p class="eyebrow">Próximo despliegue</p>
+          <h2 id="cta-title">Prepárate para navegar con precisión</h2>
+          <!-- TODO: Sustituye href por el enlace real de App Store cuando esté disponible. -->
+          <a class="button button-primary" href="#">Próximamente en App Store</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacto">
+      <div class="shell footer-grid">
+        <div>
+          <strong>Centinela: Navegación Táctica</strong>
+          <p>© <span id="copyright-year"></span> Centinela. Todos los derechos reservados.</p>
+        </div>
+        <nav aria-label="Enlaces de pie de página">
+          <a href="#tutoriales">Tutoriales</a>
+          <a href="#herramientas">Herramientas</a>
+          <a href="especificaciones.html">Especificaciones</a>
+          <!-- TODO: Sustituye estos enlaces por páginas reales cuando las crees. -->
+          <a href="#">Privacidad</a>
+          <a href="mailto:contacto@example.com">Contacto</a>
+        </nav>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

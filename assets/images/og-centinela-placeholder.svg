@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#07110d"/>
+  <g stroke="#61ff93" opacity=".18">
+    <path d="M0 90h1200M0 180h1200M0 270h1200M0 360h1200M0 450h1200M0 540h1200"/>
+    <path d="M100 0v630M200 0v630M300 0v630M400 0v630M500 0v630M600 0v630M700 0v630M800 0v630M900 0v630M1000 0v630M1100 0v630"/>
+  </g>
+  <path d="M212 410 418 250l178 92 266-170" fill="none" stroke="#ff9f43" stroke-width="8"/>
+  <circle cx="212" cy="410" r="13" fill="#61ff93"/>
+  <circle cx="418" cy="250" r="13" fill="#61ff93"/>
+  <circle cx="862" cy="172" r="13" fill="#61ff93"/>
+  <text x="80" y="130" fill="#61ff93" font-family="Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="6">NAVEGACION TACTICA</text>
+  <text x="80" y="540" fill="#f5f8f4" font-family="Arial, sans-serif" font-size="82" font-weight="800">Centinela</text>
+</svg>
