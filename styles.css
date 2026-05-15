@@ -350,6 +350,20 @@ h3 {
 
 .hero-video {
   background: #000;
+  transition: opacity 0.8s ease, filter 0.8s ease;
+}
+
+.hero-video.is-ended {
+  opacity: 0;
+  filter: blur(10px);
+  pointer-events: none;
+}
+
+.screenshot-screen.video-ended {
+  background-image: url("assets/images/fondoinicio.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .screenshot-fallback {

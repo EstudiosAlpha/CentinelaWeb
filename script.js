@@ -70,6 +70,17 @@ tutorialCards.forEach((button) => {
   button.addEventListener("focus", () => selectTutorial(button));
 });
 
+const heroVideo = document.querySelector(".hero-video");
+const screenshotScreen = document.querySelector(".screenshot-screen");
+
+if (heroVideo) {
+  heroVideo.loop = false;
+  heroVideo.addEventListener("ended", () => {
+    heroVideo.classList.add("is-ended");
+    screenshotScreen?.classList.add("video-ended");
+  });
+}
+
 if (tutorialCards[0]) selectTutorial(tutorialCards[0]);
 
 const canvas = document.getElementById("tactical-grid");
@@ -100,10 +111,10 @@ function drawTacticalGrid() {
   const offsetY = (time * 24) % gridSize;
   const minorGrid = gridSize / 4;
 
-  ctx.lineWidth = 0.9;
+  ctx.lineWidth = 1.2;
   for (let x = -minorGrid; x < width + minorGrid; x += minorGrid) {
     const lineX = x + ((time * 20) % minorGrid);
-    ctx.strokeStyle = "rgba(12, 122, 57, 0.095)";
+    ctx.strokeStyle = "rgba(12, 122, 57, 0.16)";
     ctx.beginPath();
     ctx.moveTo(lineX, 0);
     ctx.lineTo(lineX, height);
@@ -112,17 +123,17 @@ function drawTacticalGrid() {
 
   for (let y = -minorGrid; y < height + minorGrid; y += minorGrid) {
     const lineY = y + ((time * 11) % minorGrid);
-    ctx.strokeStyle = "rgba(12, 122, 57, 0.085)";
+    ctx.strokeStyle = "rgba(12, 122, 57, 0.14)";
     ctx.beginPath();
     ctx.moveTo(0, lineY);
     ctx.lineTo(width, lineY);
     ctx.stroke();
   }
 
-  ctx.lineWidth = 1.35;
+  ctx.lineWidth = 1.6;
   for (let x = -gridSize; x < width + gridSize; x += gridSize) {
     const lineX = x + offsetX;
-    ctx.strokeStyle = Math.round(lineX / gridSize) % 4 === 0 ? "rgba(12, 122, 57, 0.42)" : "rgba(12, 122, 57, 0.24)";
+    ctx.strokeStyle = Math.round(lineX / gridSize) % 4 === 0 ? "rgba(12, 122, 57, 0.62)" : "rgba(12, 122, 57, 0.36)";
     ctx.beginPath();
     ctx.moveTo(lineX, 0);
     ctx.lineTo(lineX, height);
@@ -131,7 +142,7 @@ function drawTacticalGrid() {
 
   for (let y = -gridSize; y < height + gridSize; y += gridSize) {
     const lineY = y + offsetY;
-    ctx.strokeStyle = Math.round(lineY / gridSize) % 4 === 0 ? "rgba(67, 191, 224, 0.38)" : "rgba(12, 122, 57, 0.22)";
+    ctx.strokeStyle = Math.round(lineY / gridSize) % 4 === 0 ? "rgba(67, 191, 224, 0.52)" : "rgba(12, 122, 57, 0.32)";
     ctx.beginPath();
     ctx.moveTo(0, lineY);
     ctx.lineTo(width, lineY);
