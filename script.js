@@ -103,18 +103,18 @@ function resizeCanvas() {
 }
 
 function drawTacticalGrid() {
-  time += 0.014;
+  time += 0.008;
   ctx.clearRect(0, 0, width, height);
 
   const gridSize = width < 640 ? 38 : 52;
-  const offsetX = (time * 42) % gridSize;
-  const offsetY = (time * 24) % gridSize;
+  const offsetX = (time * 24) % gridSize;
+  const offsetY = (time * 14) % gridSize;
   const minorGrid = gridSize / 4;
 
-  ctx.lineWidth = 1.2;
+  ctx.lineWidth = 1.35;
   for (let x = -minorGrid; x < width + minorGrid; x += minorGrid) {
-    const lineX = x + ((time * 20) % minorGrid);
-    ctx.strokeStyle = "rgba(12, 122, 57, 0.16)";
+    const lineX = x + ((time * 10) % minorGrid);
+    ctx.strokeStyle = "rgba(12, 122, 57, 0.24)";
     ctx.beginPath();
     ctx.moveTo(lineX, 0);
     ctx.lineTo(lineX, height);
@@ -122,8 +122,8 @@ function drawTacticalGrid() {
   }
 
   for (let y = -minorGrid; y < height + minorGrid; y += minorGrid) {
-    const lineY = y + ((time * 11) % minorGrid);
-    ctx.strokeStyle = "rgba(12, 122, 57, 0.14)";
+    const lineY = y + ((time * 7) % minorGrid);
+    ctx.strokeStyle = "rgba(12, 122, 57, 0.22)";
     ctx.beginPath();
     ctx.moveTo(0, lineY);
     ctx.lineTo(width, lineY);
@@ -158,19 +158,23 @@ function drawTacticalGrid() {
   ];
 
   points.forEach(([x, y, phase]) => {
-    const pulse = 6 + Math.sin(time * 5 + phase) * 3;
+    const blink = (Math.sin(time * 8 + phase) + 1) / 2;
+    const pulse = 8 + blink * 13;
     const px = x * width + Math.sin(time + phase) * 16;
     const py = y * height + Math.cos(time * 0.8 + phase) * 12;
-    ctx.fillStyle = "rgba(12, 122, 57, 0.95)";
+    ctx.fillStyle = `rgba(12, 122, 57, ${0.58 + blink * 0.42})`;
     ctx.beginPath();
-    ctx.arc(px, py, 3, 0, Math.PI * 2);
+    ctx.arc(px, py, 4 + blink * 2, 0, Math.PI * 2);
     ctx.fill();
-    ctx.strokeStyle = "rgba(12, 122, 57, 0.3)";
+
+    ctx.strokeStyle = `rgba(12, 122, 57, ${0.18 + blink * 0.34})`;
+    ctx.lineWidth = 2;
     ctx.beginPath();
     ctx.arc(px, py, pulse, 0, Math.PI * 2);
     ctx.stroke();
 
-    ctx.strokeStyle = "rgba(12, 122, 57, 0.62)";
+    ctx.strokeStyle = `rgba(12, 122, 57, ${0.42 + blink * 0.34})`;
+    ctx.lineWidth = 1.6;
     ctx.beginPath();
     ctx.moveTo(px - 12, py);
     ctx.lineTo(px + 12, py);
