@@ -71,13 +71,11 @@ tutorialCards.forEach((button) => {
 });
 
 const heroVideo = document.querySelector(".hero-video");
-const screenshotScreen = document.querySelector(".screenshot-screen");
 
 if (heroVideo) {
   heroVideo.loop = false;
   heroVideo.addEventListener("ended", () => {
-    heroVideo.classList.add("is-ended");
-    screenshotScreen?.classList.add("video-ended");
+    heroVideo.pause();
   });
 }
 
@@ -103,18 +101,18 @@ function resizeCanvas() {
 }
 
 function drawTacticalGrid() {
-  time += 0.008;
+  time += 0.0045;
   ctx.clearRect(0, 0, width, height);
 
   const gridSize = width < 640 ? 38 : 52;
-  const offsetX = (time * 24) % gridSize;
-  const offsetY = (time * 14) % gridSize;
+  const offsetX = (time * 12) % gridSize;
+  const offsetY = (time * 7) % gridSize;
   const minorGrid = gridSize / 4;
 
-  ctx.lineWidth = 1.35;
+  ctx.lineWidth = 1.6;
   for (let x = -minorGrid; x < width + minorGrid; x += minorGrid) {
-    const lineX = x + ((time * 10) % minorGrid);
-    ctx.strokeStyle = "rgba(12, 122, 57, 0.24)";
+    const lineX = x + ((time * 5) % minorGrid);
+    ctx.strokeStyle = "rgba(12, 122, 57, 0.34)";
     ctx.beginPath();
     ctx.moveTo(lineX, 0);
     ctx.lineTo(lineX, height);
@@ -122,8 +120,8 @@ function drawTacticalGrid() {
   }
 
   for (let y = -minorGrid; y < height + minorGrid; y += minorGrid) {
-    const lineY = y + ((time * 7) % minorGrid);
-    ctx.strokeStyle = "rgba(12, 122, 57, 0.22)";
+    const lineY = y + ((time * 3.5) % minorGrid);
+    ctx.strokeStyle = "rgba(12, 122, 57, 0.31)";
     ctx.beginPath();
     ctx.moveTo(0, lineY);
     ctx.lineTo(width, lineY);

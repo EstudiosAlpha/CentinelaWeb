@@ -41,6 +41,7 @@ http://localhost:8080
 Busca los comentarios `TODO` en `index.html` para cambiar:
 
 - Captura real del hero: guarda la segunda captura como `assets/images/hero-app-map.png`.
+- Vídeo del hero: guarda el vídeo principal como `assets/videos/inicio.MP4`.
 - Capturas reales de iPhone e iPad si quieres sustituir otros mockups CSS.
 - Enlaces de YouTube, Vimeo o vídeos `.mp4`.
 - Enlace real de App Store.
