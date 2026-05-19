@@ -845,7 +845,8 @@ h3 {
   height: 100%;
 }
 
-.ipad-screenshot {
+.ipad-screenshot,
+.iphone-screenshot {
   display: block;
   width: 100%;
   height: 100%;
