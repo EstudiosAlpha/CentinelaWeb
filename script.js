@@ -157,34 +157,41 @@ function drawTacticalGrid() {
 
   points.forEach(([x, y, phase]) => {
     const blink = (Math.sin(time * 8 + phase) + 1) / 2;
-    const pulse = 8 + blink * 13;
+    const pulse = 18 + blink * 28;
     const px = x * width + Math.sin(time + phase) * 16;
     const py = y * height + Math.cos(time * 0.8 + phase) * 12;
-    ctx.fillStyle = `rgba(12, 122, 57, ${0.58 + blink * 0.42})`;
+
+    ctx.fillStyle = `rgba(255, 255, 255, ${0.56 + blink * 0.24})`;
     ctx.beginPath();
-    ctx.arc(px, py, 4 + blink * 2, 0, Math.PI * 2);
+    ctx.arc(px, py, 13 + blink * 3, 0, Math.PI * 2);
     ctx.fill();
 
-    ctx.strokeStyle = `rgba(12, 122, 57, ${0.18 + blink * 0.34})`;
-    ctx.lineWidth = 2;
+    ctx.fillStyle = `rgba(25, 185, 87, ${0.92 + blink * 0.08})`;
+    ctx.beginPath();
+    ctx.arc(px, py, 7 + blink * 3, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.strokeStyle = `rgba(25, 185, 87, ${0.36 + blink * 0.38})`;
+    ctx.lineWidth = 4;
     ctx.beginPath();
     ctx.arc(px, py, pulse, 0, Math.PI * 2);
     ctx.stroke();
 
-    ctx.strokeStyle = `rgba(12, 122, 57, ${0.42 + blink * 0.34})`;
-    ctx.lineWidth = 1.6;
+    ctx.strokeStyle = `rgba(25, 185, 87, ${0.78 + blink * 0.22})`;
+    ctx.lineWidth = 2.8;
     ctx.beginPath();
-    ctx.moveTo(px - 12, py);
-    ctx.lineTo(px + 12, py);
-    ctx.moveTo(px, py - 12);
-    ctx.lineTo(px, py + 12);
+    ctx.moveTo(px - 20, py);
+    ctx.lineTo(px + 20, py);
+    ctx.moveTo(px, py - 20);
+    ctx.lineTo(px, py + 20);
     ctx.stroke();
   });
 
   const routes = [
     {
-      color: "rgba(241, 200, 68, 0.92)",
-      width: 4,
+      color: "rgba(241, 200, 68, 1)",
+      glow: "rgba(241, 200, 68, 0.28)",
+      width: 7,
       points: [
         [0.12, 0.68],
         [0.28, 0.42],
@@ -195,8 +202,9 @@ function drawTacticalGrid() {
       phase: 0,
     },
     {
-      color: "rgba(25, 185, 87, 0.82)",
-      width: 3,
+      color: "rgba(25, 185, 87, 0.98)",
+      glow: "rgba(25, 185, 87, 0.24)",
+      width: 6,
       points: [
         [0.08, 0.28],
         [0.24, 0.2],
@@ -206,8 +214,9 @@ function drawTacticalGrid() {
       phase: 2.1,
     },
     {
-      color: "rgba(67, 191, 224, 0.74)",
-      width: 3,
+      color: "rgba(67, 191, 224, 0.98)",
+      glow: "rgba(67, 191, 224, 0.24)",
+      width: 6,
       points: [
         [0.34, 0.82],
         [0.46, 0.62],
@@ -221,21 +230,48 @@ function drawTacticalGrid() {
   routes.forEach((route) => {
     const routeProgress = (Math.sin(time * 0.85 + route.phase) + 1) / 2;
     const visibleSegments = Math.max(2, Math.ceil(route.points.length * routeProgress));
+    const visiblePoints = route.points.slice(0, visibleSegments).map(([x, y]) => [
+      x * width,
+      y * height,
+    ]);
+
     ctx.save();
-    ctx.strokeStyle = route.color;
-    ctx.lineWidth = route.width;
+    ctx.strokeStyle = route.glow;
+    ctx.lineWidth = route.width + 12;
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-    ctx.setLineDash([18, 14]);
-    ctx.lineDashOffset = -(time * 120 + route.phase * 20);
     ctx.beginPath();
-    route.points.slice(0, visibleSegments).forEach(([x, y], index) => {
-      const px = x * width;
-      const py = y * height;
+    visiblePoints.forEach(([px, py], index) => {
       if (index === 0) ctx.moveTo(px, py);
       else ctx.lineTo(px, py);
     });
     ctx.stroke();
+
+    ctx.strokeStyle = route.color;
+    ctx.lineWidth = route.width;
+    ctx.lineCap = "round";
+    ctx.lineJoin = "round";
+    ctx.setLineDash([24, 12]);
+    ctx.lineDashOffset = -(time * 170 + route.phase * 20);
+    ctx.beginPath();
+    visiblePoints.forEach(([px, py], index) => {
+      if (index === 0) ctx.moveTo(px, py);
+      else ctx.lineTo(px, py);
+    });
+    ctx.stroke();
+
+    ctx.setLineDash([]);
+    visiblePoints.forEach(([px, py], index) => {
+      const dotPulse = (Math.sin(time * 10 + route.phase + index) + 1) / 2;
+      ctx.fillStyle = "rgba(255, 255, 255, 0.92)";
+      ctx.beginPath();
+      ctx.arc(px, py, 5 + dotPulse * 2, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = route.color;
+      ctx.beginPath();
+      ctx.arc(px, py, 2.8 + dotPulse, 0, Math.PI * 2);
+      ctx.fill();
+    });
     ctx.restore();
   });
 
@@ -252,10 +288,14 @@ function drawTacticalGrid() {
     ctx.translate(px, py);
     ctx.strokeStyle = symbol.color;
     ctx.fillStyle = symbol.color;
-    ctx.lineWidth = 2;
-    ctx.strokeRect(-9, -9, 18, 18);
-    ctx.font = "700 11px ui-sans-serif, system-ui, sans-serif";
-    ctx.fillText(symbol.label, 15, 4);
+    ctx.lineWidth = 3;
+    ctx.fillStyle = "rgba(255, 255, 255, 0.88)";
+    ctx.fillRect(-15, -15, 30, 30);
+    ctx.strokeStyle = symbol.color;
+    ctx.strokeRect(-14, -14, 28, 28);
+    ctx.fillStyle = symbol.color;
+    ctx.font = "900 14px ui-sans-serif, system-ui, sans-serif";
+    ctx.fillText(symbol.label, 20, 5);
     ctx.restore();
   });
 
