@@ -745,6 +745,12 @@ h3 {
   gap: 0.75rem;
 }
 
+.tutorial-more {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
 .tutorial-page {
   position: relative;
   min-height: calc(100svh - var(--header-height));
