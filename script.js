@@ -42,8 +42,7 @@ function buildTutorialContent(src, title) {
     const iframe = document.createElement("iframe");
     iframe.src = src;
     iframe.title = title;
-    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
-    iframe.allowFullscreen = true;
+    iframe.allow = "autoplay; encrypted-media";
     iframe.loading = "lazy";
     return iframe;
   }
@@ -51,7 +50,12 @@ function buildTutorialContent(src, title) {
   const video = document.createElement("video");
   video.src = src;
   video.controls = true;
+  video.controlsList = "nodownload nofullscreen noremoteplayback";
+  video.setAttribute("controlslist", "nodownload nofullscreen noremoteplayback");
+  video.disablePictureInPicture = true;
+  video.setAttribute("disablepictureinpicture", "");
   video.playsInline = true;
+  video.setAttribute("playsinline", "");
   video.preload = "metadata";
   return video;
 }
@@ -66,8 +70,6 @@ function selectTutorial(button) {
 
 tutorialCards.forEach((button) => {
   button.addEventListener("click", () => selectTutorial(button));
-  button.addEventListener("mouseenter", () => selectTutorial(button));
-  button.addEventListener("focus", () => selectTutorial(button));
 });
 
 const heroVideo = document.querySelector(".hero-video");
