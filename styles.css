@@ -644,6 +644,10 @@ h3 {
   margin-bottom: 2rem;
 }
 
+.section-heading .button {
+  margin-top: 0.8rem;
+}
+
 .app-panel {
   display: flex;
   align-items: center;
@@ -739,6 +743,70 @@ h3 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 0.75rem;
+}
+
+.tutorial-page {
+  position: relative;
+  min-height: calc(100svh - var(--header-height));
+  overflow: hidden;
+  padding-top: var(--header-height);
+  isolation: isolate;
+}
+
+.tutorial-page-shell {
+  display: grid;
+  gap: clamp(2rem, 5vw, 4rem);
+  padding-block: clamp(3rem, 6vw, 5rem);
+}
+
+.tutorial-page-heading {
+  max-width: 780px;
+  margin-inline: auto;
+  text-align: center;
+}
+
+.tutorial-page-heading h1 {
+  max-width: none;
+  margin-inline: auto;
+}
+
+.tutorial-page-heading p:not(.eyebrow) {
+  max-width: 48ch;
+  margin-inline: auto;
+  color: var(--muted);
+  font-size: clamp(1rem, 1.35vw, 1.17rem);
+}
+
+.tutorial-browser {
+  display: grid;
+  grid-template-columns: minmax(240px, 1fr) minmax(260px, 340px) minmax(240px, 1fr);
+  grid-template-areas: "left phone right";
+  align-items: center;
+  gap: clamp(1rem, 3vw, 2rem);
+}
+
+.tutorial-menu {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.tutorial-menu-left {
+  grid-area: left;
+}
+
+.tutorial-menu-right {
+  grid-area: right;
+}
+
+.tutorial-player {
+  grid-area: phone;
+}
+
+.tutorial-player .tutorial-phone {
+  position: relative;
+  top: auto;
+  width: min(100%, 330px);
+  margin-inline: auto;
 }
 
 .tutorial-card {
@@ -892,6 +960,121 @@ h3 {
   gap: 1rem;
 }
 
+.tutorial-hero .spec-hero-layout h1 {
+  max-width: 10ch;
+}
+
+.tutorial-index {
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.tutorial-category-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tutorial-index-card {
+  display: grid;
+  min-height: 190px;
+  align-content: start;
+  gap: 0.65rem;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface-solid);
+  padding: 1.15rem;
+  text-decoration: none;
+  box-shadow: 0 12px 34px rgba(16, 24, 20, 0.07);
+  transition: transform 180ms ease, box-shadow 180ms ease, border-color 180ms ease;
+}
+
+.tutorial-index-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(25, 185, 87, 0.35);
+  box-shadow: 0 20px 44px rgba(16, 24, 20, 0.12);
+}
+
+.tutorial-index-card:focus-visible {
+  outline: 3px solid rgba(67, 191, 224, 0.48);
+  outline-offset: 4px;
+}
+
+.tutorial-index-card [data-icon] {
+  width: 2.6rem;
+  height: 2.6rem;
+}
+
+.tutorial-index-card strong {
+  font-size: 1.1rem;
+  line-height: 1.15;
+}
+
+.tutorial-index-card small {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.tutorial-catalog {
+  scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+.tutorial-catalog + .tutorial-catalog {
+  padding-top: 0;
+}
+
+.tutorial-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.tutorial-detail-card {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 22px;
+  background: var(--surface-solid);
+  padding: clamp(1rem, 3vw, 1.45rem);
+  box-shadow: 0 12px 34px rgba(16, 24, 20, 0.07);
+}
+
+.tutorial-detail-card [data-icon] {
+  width: 2.3rem;
+  height: 2.3rem;
+  margin-top: 0.2rem;
+}
+
+.tutorial-detail-card h3 {
+  margin-bottom: 0.6rem;
+  font-size: clamp(1.2rem, 2vw, 1.55rem);
+}
+
+.tutorial-detail-card p:not(.tutorial-tag),
+.tutorial-detail-card li {
+  color: var(--muted);
+}
+
+.tutorial-detail-card ol {
+  display: grid;
+  gap: 0.45rem;
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.tutorial-tag {
+  width: fit-content;
+  margin-bottom: 0.65rem;
+  border: 1px solid rgba(25, 185, 87, 0.26);
+  border-radius: 999px;
+  background: rgba(25, 185, 87, 0.1);
+  color: var(--green-dark);
+  padding: 0.2rem 0.55rem;
+  font-size: 0.76rem;
+  font-weight: 850;
+  text-transform: uppercase;
+}
+
 .spec-card {
   border: 1px solid var(--line);
   border-radius: 22px;
@@ -925,6 +1108,51 @@ h3 {
 .spec-card dd {
   margin: 0;
   color: var(--muted);
+}
+
+.privacy-hero .spec-hero-layout h1 {
+  max-width: 11ch;
+}
+
+.privacy-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  max-width: 900px;
+}
+
+.privacy-card h2 {
+  margin-bottom: 0.8rem;
+  font-size: clamp(1.35rem, 2vw, 1.8rem);
+}
+
+.privacy-card p,
+.privacy-card li {
+  color: var(--muted);
+}
+
+.privacy-card p:last-child,
+.privacy-card ul:last-child {
+  margin-bottom: 0;
+}
+
+.privacy-card ul {
+  display: grid;
+  gap: 0.55rem;
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.privacy-updated {
+  margin-bottom: 1rem;
+  color: var(--green-dark);
+  font-size: 0.88rem;
+  font-weight: 850;
+}
+
+.privacy-note {
+  border-color: rgba(25, 185, 87, 0.32);
+  background: linear-gradient(135deg, #fff, rgba(25, 185, 87, 0.08));
 }
 
 .site-footer {
@@ -1052,12 +1280,25 @@ h3 {
     grid-template-columns: 1fr;
   }
 
+  .tutorial-category-grid,
+  .tutorial-detail-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .iphone-large {
     margin-inline: auto;
   }
 
   .tool-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .tutorial-browser {
+    grid-template-columns: minmax(0, 1fr) minmax(250px, 330px);
+    grid-template-areas:
+      "phone phone"
+      "left right";
+    align-items: start;
   }
 
   .tutorial-phone {
@@ -1100,7 +1341,26 @@ h3 {
   }
 
   .tool-grid,
-  .tutorial-list {
+  .tutorial-list,
+  .tutorial-menu,
+  .tutorial-category-grid,
+  .tutorial-detail-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tutorial-browser {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "phone"
+      "left"
+      "right";
+  }
+
+  .tutorial-index-card {
+    min-height: auto;
+  }
+
+  .tutorial-detail-card {
     grid-template-columns: 1fr;
   }
 

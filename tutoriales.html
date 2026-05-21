@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>Tutoriales completos | Centinela: Navegación Táctica</title>
+    <meta
+      name="description"
+      content="Videotutoriales de Centinela para waypoints, mapas RMAP, mapas offline, rutas, misiones, servidor y herramientas de navegación táctica."
+    />
+    <meta property="og:title" content="Tutoriales completos de Centinela" />
+    <meta
+      property="og:description"
+      content="Videotutoriales para aprender a usar mapas, waypoints, rutas, misiones y servidor en Centinela."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/centinela-app-icon.png" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="icon" href="assets/images/centinela-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Navegación principal">
+        <a class="brand" href="index.html#inicio" aria-label="Centinela, inicio">
+          <img src="assets/images/centinela-app-icon.png" alt="" />
+          <span>Centinela</span>
+        </a>
+        <div class="nav-links">
+          <a href="especificaciones.html">Especificaciones</a>
+          <a href="tutoriales.html" aria-current="page">Tutoriales</a>
+          <a href="privacidad.html">Privacidad</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="tutorial-page" aria-labelledby="tutorial-page-title">
+        <canvas id="tactical-grid" class="tactical-grid" aria-hidden="true"></canvas>
+        <div class="hero-map" aria-hidden="true"></div>
+        <div class="scanline" aria-hidden="true"></div>
+
+        <div class="shell tutorial-page-shell">
+          <div class="tutorial-page-heading reveal">
+            <p class="eyebrow">Centro de tutoriales</p>
+            <h1 id="tutorial-page-title">Tutoriales completos</h1>
+            <p>
+              Pulsa un tutorial y el vídeo aparecerá en el iPhone.
+            </p>
+          </div>
+
+          <div class="tutorial-browser">
+            <div class="tutorial-menu tutorial-menu-left">
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Crear un waypoint"
+                data-description="Marca un punto directamente sobre el mapa."
+                data-video="assets/videos/tutorial-crear-waypoint-placeholder.mp4"
+              >
+                <span data-icon="waypoint"></span>
+                <strong>Crear waypoint</strong>
+                <small>Desde el mapa.</small>
+                <em>Ver vídeo</em>
+              </button>
+
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Agregar waypoint por coordenadas"
+                data-description="Introduce coordenadas manualmente para crear un punto exacto."
+                data-video="assets/videos/tutorial-waypoint-coordenadas-placeholder.mp4"
+              >
+                <span data-icon="waypoint"></span>
+                <strong>Waypoint por coordenadas</strong>
+                <small>Latitud, longitud y nombre.</small>
+                <em>Ver vídeo</em>
+              </button>
+
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Agregar waypoints por archivo"
+                data-description="Importa puntos desde un archivo compatible."
+                data-video="assets/videos/tutorial-waypoints-archivo-placeholder.mp4"
+              >
+                <span data-icon="package"></span>
+                <strong>Waypoints por archivo</strong>
+                <small>Importación de puntos.</small>
+                <em>Ver vídeo</em>
+              </button>
+
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Crear lista de waypoints"
+                data-description="Organiza puntos en listas para cada misión o zona."
+                data-video="assets/videos/tutorial-lista-waypoints-placeholder.mp4"
+              >
+                <span data-icon="grid"></span>
+                <strong>Lista de waypoints</strong>
+                <small>Ordena tus puntos.</small>
+                <em>Ver vídeo</em>
+              </button>
+
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Mandar waypoint al servidor"
+                data-description="Comparte un waypoint con el servidor configurado."
+                data-video="assets/videos/tutorial-waypoint-servidor-placeholder.mp4"
+              >
+                <span data-icon="sync"></span>
+                <strong>Mandar waypoint al servidor</strong>
+                <small>Sincroniza el punto.</small>
+                <em>Ver vídeo</em>
+              </button>
+            </div>
+
+            <div class="tutorial-player reveal">
+              <div class="iphone tutorial-phone" aria-label="Vídeo del tutorial seleccionado">
+                <div class="iphone-screen tutorial-screen" id="tutorial-preview">
+                  <div class="tutorial-placeholder">
+                    <span data-icon="video"></span>
+                    <strong>Selecciona un tutorial</strong>
+                    <small>El vídeo se reproducirá con formato vertical dentro del iPhone.</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="tutorial-menu tutorial-menu-right">
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Importar mapa RMAP"
+                data-description="Carga un mapa RMAP para usarlo en Centinela."
+                data-video="assets/videos/tutorial-importar-rmap-placeholder.mp4"
+              >
+                <span data-icon="map"></span>
+                <strong>Importar mapa RMAP</strong>
+                <small>Mapas preparados.</small>
+                <em>Ver vídeo</em>
+              </button>
+
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Descargar mapa offline"
+                data-description="Prepara una zona para consultarla sin conexión."
+                data-video="assets/videos/tutorial-mapa-offline-placeholder.mp4"
+              >
+                <span data-icon="layers"></span>
+                <strong>Descargar mapa offline</strong>
+                <small>Trabajo sin cobertura.</small>
+                <em>Ver vídeo</em>
+              </button>
+
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Usar capas de mapa"
+                data-description="Activa y ordena capas según la información que necesites."
+                data-video="assets/videos/tutorial-capas-placeholder.mp4"
+              >
+                <span data-icon="layers"></span>
+                <strong>Capas de mapa</strong>
+                <small>Control visual del terreno.</small>
+                <em>Ver vídeo</em>
+              </button>
+
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Grabar una ruta"
+                data-description="Registra un desplazamiento y guárdalo como ruta."
+                data-video="assets/videos/tutorial-grabar-ruta-placeholder.mp4"
+              >
+                <span data-icon="record"></span>
+                <strong>Grabar una ruta</strong>
+                <small>Recorrido en tiempo real.</small>
+                <em>Ver vídeo</em>
+              </button>
+
+              <button
+                class="tutorial-card reveal"
+                type="button"
+                aria-pressed="false"
+                data-title="Crear una misión"
+                data-description="Agrupa mapas, rutas, waypoints y contactos en una misión."
+                data-video="assets/videos/tutorial-crear-mision-placeholder.mp4"
+              >
+                <span data-icon="sync"></span>
+                <strong>Crear una misión</strong>
+                <small>Todo en un contexto.</small>
+                <em>Ver vídeo</em>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacto">
+      <div class="shell footer-grid">
+        <div>
+          <strong>Centinela: Navegación Táctica</strong>
+          <p>© <span id="copyright-year"></span> Centinela. Todos los derechos reservados.</p>
+        </div>
+        <nav aria-label="Enlaces de pie de página">
+          <a href="especificaciones.html">Especificaciones</a>
+          <a href="tutoriales.html">Tutoriales</a>
+          <a href="privacidad.html">Privacidad</a>
+          <a href="mailto:contacto@example.com">Contacto</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
