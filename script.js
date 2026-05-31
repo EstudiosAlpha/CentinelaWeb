@@ -26,18 +26,7 @@ document.querySelectorAll("[data-required-image]").forEach((image) => {
 const tutorialPreview = document.getElementById("tutorial-preview");
 const tutorialCards = document.querySelectorAll(".tutorial-card");
 
-function buildTutorialContent(src, title) {
-  if (src.includes("placeholder")) {
-    const placeholder = document.createElement("div");
-    placeholder.className = "video-placeholder";
-    placeholder.innerHTML = `
-      <span data-icon="video"></span>
-      <strong>${title}</strong>
-      <small>Sustituye este enlace por un vídeo vertical real.</small>
-    `;
-    return placeholder;
-  }
-
+function buildTutorialMedia(src, title, shouldAutoplay = false, poster = "") {
   if (src.includes("youtube.com") || src.includes("youtu.be") || src.includes("vimeo.com")) {
     const iframe = document.createElement("iframe");
     iframe.src = src;
@@ -57,7 +46,58 @@ function buildTutorialContent(src, title) {
   video.playsInline = true;
   video.setAttribute("playsinline", "");
   video.preload = "metadata";
+  if (poster) {
+    video.poster = poster;
+  }
+  if (shouldAutoplay) {
+    video.autoplay = true;
+  }
   return video;
+}
+
+function buildTutorialPoster(src, title, poster) {
+  const posterButton = document.createElement("button");
+  posterButton.className = "tutorial-video-poster";
+  posterButton.type = "button";
+  posterButton.setAttribute("aria-label", `Reproducir ${title}`);
+
+  const image = document.createElement("img");
+  image.src = poster;
+  image.alt = "";
+  image.loading = "lazy";
+  posterButton.append(image);
+
+  const playIcon = document.createElement("span");
+  playIcon.className = "tutorial-play-icon";
+  playIcon.setAttribute("aria-hidden", "true");
+  posterButton.append(playIcon);
+
+  posterButton.addEventListener("click", () => {
+    const media = buildTutorialMedia(src, title, true, poster);
+    tutorialPreview.replaceChildren(media);
+    media.play?.().catch(() => {});
+  });
+
+  return posterButton;
+}
+
+function buildTutorialContent(src, title, poster) {
+  if (src.includes("placeholder")) {
+    const placeholder = document.createElement("div");
+    placeholder.className = "video-placeholder";
+    placeholder.innerHTML = `
+      <span data-icon="video"></span>
+      <strong>${title}</strong>
+      <small>Sustituye este enlace por un vídeo vertical real.</small>
+    `;
+    return placeholder;
+  }
+
+  if (poster) {
+    return buildTutorialPoster(src, title, poster);
+  }
+
+  return buildTutorialMedia(src, title);
 }
 
 function selectTutorial(button) {
@@ -65,7 +105,9 @@ function selectTutorial(button) {
     card.classList.toggle("is-selected", card === button);
     card.setAttribute("aria-pressed", String(card === button));
   });
-  tutorialPreview.replaceChildren(buildTutorialContent(button.dataset.video, button.dataset.title));
+  tutorialPreview.replaceChildren(
+    buildTutorialContent(button.dataset.video, button.dataset.title, button.dataset.poster)
+  );
 }
 
 tutorialCards.forEach((button) => {
