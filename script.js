@@ -1,4 +1,85 @@
-document.getElementById("copyright-year").textContent = new Date().getFullYear();
+const copyrightYear = document.getElementById("copyright-year");
+if (copyrightYear) {
+  copyrightYear.textContent = new Date().getFullYear();
+}
+
+const menuToggle = document.querySelector(".menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+function closeMenu() {
+  if (!menuToggle || !navLinks) return;
+  menuToggle.setAttribute("aria-expanded", "false");
+  navLinks.classList.remove("is-open");
+}
+
+if (menuToggle && navLinks) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
+    menuToggle.setAttribute("aria-expanded", String(!isOpen));
+    navLinks.classList.toggle("is-open", !isOpen);
+  });
+
+  navLinks.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMenu);
+  });
+
+  document.addEventListener("click", (event) => {
+    if (!event.target.closest(".nav")) {
+      closeMenu();
+    }
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") {
+      closeMenu();
+    }
+  });
+}
+
+const cookieStorageKey = "centinela-cookie-consent";
+
+function hasCookieConsent() {
+  try {
+    return localStorage.getItem(cookieStorageKey) === "accepted";
+  } catch {
+    return false;
+  }
+}
+
+function saveCookieConsent() {
+  try {
+    localStorage.setItem(cookieStorageKey, "accepted");
+  } catch {
+    return;
+  }
+}
+
+function buildCookieBanner() {
+  if (hasCookieConsent()) return;
+
+  const banner = document.createElement("aside");
+  banner.className = "cookie-banner";
+  banner.setAttribute("aria-label", "Aviso de cookies");
+  banner.innerHTML = `
+    <p>
+      <strong>Política de cookies</strong>
+      Utilizamos cookies técnicas o almacenamiento local para recordar tus preferencias y mejorar el funcionamiento básico de la web.
+    </p>
+    <div class="cookie-actions">
+      <button class="button button-primary" type="button">Aceptar</button>
+      <a class="button button-secondary" href="privacidad.html#cookies">Más información</a>
+    </div>
+  `;
+
+  banner.querySelector("button").addEventListener("click", () => {
+    saveCookieConsent();
+    banner.hidden = true;
+  });
+
+  document.body.append(banner);
+}
+
+buildCookieBanner();
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
