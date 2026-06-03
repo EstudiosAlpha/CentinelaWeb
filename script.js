@@ -1,4 +1,7 @@
 const copyrightYear = document.getElementById("copyright-year");
+const i18n = window.centinelaI18n;
+const translate = (text) => i18n?.t(text) || text;
+
 if (copyrightYear) {
   copyrightYear.textContent = new Date().getFullYear();
 }
@@ -59,15 +62,15 @@ function buildCookieBanner() {
 
   const banner = document.createElement("aside");
   banner.className = "cookie-banner";
-  banner.setAttribute("aria-label", "Aviso de cookies");
+  banner.setAttribute("aria-label", translate("Aviso de cookies"));
   banner.innerHTML = `
     <p>
-      <strong>Política de cookies</strong>
-      Utilizamos cookies técnicas o almacenamiento local para recordar tus preferencias y mejorar el funcionamiento básico de la web.
+      <strong>${translate("Política de cookies")}</strong>
+      ${translate("Utilizamos cookies técnicas o almacenamiento local para recordar tus preferencias y mejorar el funcionamiento básico de la web.")}
     </p>
     <div class="cookie-actions">
-      <button class="button button-primary" type="button">Aceptar</button>
-      <a class="button button-secondary" href="privacidad.html#cookies">Más información</a>
+      <button class="button button-primary" type="button">${translate("Aceptar")}</button>
+      <a class="button button-secondary" href="privacidad.html#cookies">${translate("Más información")}</a>
     </div>
   `;
 
@@ -140,7 +143,7 @@ function buildTutorialPoster(src, title, poster) {
   const posterButton = document.createElement("button");
   posterButton.className = "tutorial-video-poster";
   posterButton.type = "button";
-  posterButton.setAttribute("aria-label", `Reproducir ${title}`);
+  posterButton.setAttribute("aria-label", `${translate("Reproducir")} ${title}`);
 
   const image = document.createElement("img");
   image.src = poster;
@@ -169,7 +172,7 @@ function buildTutorialContent(src, title, poster) {
     placeholder.innerHTML = `
       <span data-icon="video"></span>
       <strong>${title}</strong>
-      <small>Sustituye este enlace por un vídeo vertical real.</small>
+      <small>${translate("Sustituye este enlace por un vídeo vertical real.")}</small>
     `;
     return placeholder;
   }
