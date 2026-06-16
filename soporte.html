@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f7f5ef" />
+    <title>Soporte | Centinela: Navegación Táctica</title>
+    <meta
+      name="description"
+      content="Página de soporte de Centinela: Navegación Táctica. Contacto, ayuda, preguntas frecuentes y cómo resolver incidencias de la aplicación."
+    />
+    <meta property="og:title" content="Soporte de Centinela" />
+    <meta
+      property="og:description"
+      content="Centro de ayuda y contacto para usuarios de Centinela: Navegación Táctica."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/images/centinela-app-icon.png" />
+    <meta property="og:locale" content="es_ES" />
+    <link rel="icon" href="assets/images/centinela-app-icon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+    <header class="site-header">
+      <nav class="nav shell" aria-label="Navegación principal">
+        <a class="brand" href="index.html#inicio" aria-label="Centinela, inicio">
+          <img src="assets/images/centinela-app-icon.png" alt="" />
+          <span>Centinela</span>
+        </a>
+        <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span class="visually-hidden">Abrir menú</span>
+        </button>
+        <div class="nav-links" id="primary-navigation">
+          <a href="especificaciones.html">Especificaciones</a>
+          <a href="tutoriales.html">Tutoriales</a>
+          <a href="privacidad.html">Privacidad</a>
+          <a href="soporte.html" aria-current="page">Soporte</a>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="spec-hero privacy-hero" aria-labelledby="support-title">
+        <canvas id="tactical-grid" class="tactical-grid" aria-hidden="true"></canvas>
+        <div class="hero-map" aria-hidden="true"></div>
+        <div class="scanline" aria-hidden="true"></div>
+        <div class="shell spec-hero-layout">
+          <p class="eyebrow">Soporte</p>
+          <h1 id="support-title">Centro de ayuda</h1>
+          <p>
+            Aquí encontrarás cómo contactar con el equipo de Centinela, resolver dudas
+            frecuentes y obtener ayuda con la aplicación.
+          </p>
+        </div>
+      </section>
+
+      <section class="section privacy-content">
+        <div class="shell privacy-layout">
+          <article class="spec-card privacy-card">
+            <h2>Contacto</h2>
+            <p>
+              Para cualquier consulta, incidencia o sugerencia sobre Centinela: Navegación
+              Táctica, escríbenos por correo electrónico. Respondemos en un plazo habitual de
+              entre 24 y 72 horas laborables.
+            </p>
+            <p>
+              Correo de soporte:
+              <a href="mailto:contacto@example.com">contacto@example.com</a>
+            </p>
+          </article>
+
+          <article class="spec-card privacy-card">
+            <h2>Cómo pedir ayuda</h2>
+            <p>
+              Para que podamos ayudarte lo más rápido posible, incluye en tu mensaje la siguiente
+              información:
+            </p>
+            <ul>
+              <li>Modelo de dispositivo y versión de iOS o iPadOS.</li>
+              <li>Versión de la app Centinela que estás utilizando.</li>
+              <li>Descripción clara del problema y los pasos para reproducirlo.</li>
+              <li>Capturas de pantalla o vídeo, si es posible.</li>
+            </ul>
+          </article>
+
+          <article class="spec-card privacy-card">
+            <h2>Preguntas frecuentes</h2>
+            <p><strong>¿Necesito conexión a internet para usar la app?</strong></p>
+            <p>
+              Muchas funciones de navegación, mapas y waypoints están pensadas para funcionar sin
+              conexión una vez descargados los datos. La sincronización con un servidor sí requiere
+              conexión.
+            </p>
+            <p><strong>¿Por qué la app pide permiso de ubicación?</strong></p>
+            <p>
+              La ubicación se utiliza para mostrar tu posición en el mapa, grabar rutas y crear
+              referencias. Puedes gestionar este permiso desde los ajustes de iOS o iPadOS.
+            </p>
+            <p><strong>¿Cómo importo mapas o rutas?</strong></p>
+            <p>
+              Puedes consultar los pasos detallados en la página de
+              <a href="tutoriales.html">Tutoriales</a>, donde se explica el proceso de importación
+              y configuración.
+            </p>
+          </article>
+
+          <article class="spec-card privacy-card">
+            <h2>Recursos</h2>
+            <p>
+              Antes de escribirnos, quizá encuentres la respuesta en estas secciones:
+            </p>
+            <ul>
+              <li><a href="tutoriales.html">Tutoriales</a> — guías de uso paso a paso.</li>
+              <li><a href="especificaciones.html">Especificaciones</a> — funciones y requisitos.</li>
+              <li><a href="privacidad.html">Privacidad</a> — tratamiento de datos y permisos.</li>
+            </ul>
+          </article>
+
+          <article class="spec-card privacy-card">
+            <h2>Incidencias y errores</h2>
+            <p>
+              Si encuentras un error o un comportamiento inesperado, indícanos qué estabas haciendo
+              justo antes de que ocurriera. Esa información nos ayuda a localizar y corregir el
+              problema en próximas actualizaciones.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" id="contacto">
+      <div class="shell footer-grid">
+        <div>
+          <strong>Centinela: Navegación Táctica</strong>
+          <p>© <span id="copyright-year"></span> Centinela. Todos los derechos reservados.</p>
+        </div>
+        <nav aria-label="Enlaces de pie de página">
+          <a href="especificaciones.html">Especificaciones</a>
+          <a href="tutoriales.html">Tutoriales</a>
+          <a href="privacidad.html">Privacidad</a>
+          <a href="soporte.html">Soporte</a>
+          <a href="mailto:contacto@example.com">Contacto</a>
+        </nav>
+      </div>
+    </footer>
+
+    <script src="i18n.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
