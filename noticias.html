@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f5ef" />
+  <title>Noticias | Centinela: Navegación Táctica</title>
+  <meta name="description" content="Novedades, actualizaciones y anuncios de Centinela: Navegación Táctica." />
+  <meta property="og:title" content="Noticias | Centinela: Navegación Táctica" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/images/centinela-app-icon.png" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="icon" href="assets/images/centinela-app-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+<header class="site-header">
+  <nav class="nav shell" aria-label="Navegación principal">
+    <a class="brand" href="index.html#inicio" aria-label="Centinela, inicio">
+      <img src="assets/images/centinela-app-icon.png" alt="" />
+      <span>Centinela</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+      <span class="visually-hidden">Abrir menú</span>
+    </button>
+    <div class="nav-links" id="primary-navigation">
+      <a href="especificaciones.html">Especificaciones</a>
+      <a href="tutoriales.html">Tutoriales</a>
+      <a href="noticias.html" aria-current="page">Noticias</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="soporte.html">Soporte</a>
+    </div>
+  </nav>
+</header>
+  <main id="contenido">
+    <section class="spec-hero privacy-hero" aria-labelledby="page-title">
+  <canvas id="tactical-grid" class="tactical-grid" aria-hidden="true"></canvas>
+  <div class="hero-map" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="shell spec-hero-layout">
+    <p class="eyebrow">Noticias</p>
+    <h1 id="page-title">Novedades de Centinela</h1>
+    <p>Las últimas actualizaciones y anuncios, de lo más reciente a lo más antiguo.</p>
+  </div>
+</section>
+    <section class="section privacy-content">
+      <div class="shell privacy-layout">
+        <article class="spec-card privacy-card"><p>Aún no hay noticias publicadas.</p></article>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer" id="contacto">
+  <div class="shell footer-grid">
+    <div>
+      <strong>Centinela: Navegación Táctica</strong>
+      <p>© <span id="copyright-year"></span> Centinela. Todos los derechos reservados.</p>
+    </div>
+    <nav aria-label="Enlaces de pie de página">
+      <a href="especificaciones.html">Especificaciones</a>
+      <a href="tutoriales.html">Tutoriales</a>
+      <a href="noticias.html">Noticias</a>
+      <a href="privacidad.html">Privacidad</a>
+      <a href="soporte.html">Soporte</a>
+      <a href="https://discord.gg/jWzjWPPz" target="_blank" rel="noopener">Discord</a>
+    </nav>
+  </div>
+</footer>
+<script src="i18n.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
