@@ -1689,3 +1689,29 @@ h3 {
   outline-offset: 4px;
   border-radius: 8px;
 }
+
+/* Iconos sociales (Discord / WhatsApp) */
+.social-links {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--surface-solid);
+  border: 1px solid var(--line);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.social-links a:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+.social-links img {
+  width: 20px;
+  height: 20px;
+}
