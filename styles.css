@@ -1665,3 +1665,27 @@ h3 {
     animation-duration: 0.01ms !important;
   }
 }
+
+/* Badge oficial "Consíguelo en el App Store" (sección CTA) */
+.app-store-badge {
+  display: inline-block;
+  margin-top: 1.6rem;
+  line-height: 0;
+}
+.app-store-badge img {
+  width: auto;
+  height: 54px;
+  margin: 0;
+  border-radius: 0;
+  box-shadow: none;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+.app-store-badge:hover img {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+.app-store-badge:focus-visible {
+  outline: 2px solid var(--green);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
