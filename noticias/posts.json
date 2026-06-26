@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-06-26-174635",
+    "title": "Centinela 1.2",
+    "date": "2026-06-26T15:46:35.002Z",
+    "dateLabel": "26 de junio de 2026",
+    "file": "2026-06-26-174635.html",
+    "image": null,
+    "excerpt": "🇪🇸👑Tercera versión de Centinela. Esta actualización añade la conexión con Meshtastic, completa el editor de figuras de dibujo y mejora la robustez de la conexión TAK. ➕Añadido ▶️Conexión con Meshta…"
+  },
+  {
     "id": "2026-06-24-032926",
     "title": "Centinela 1.1",
     "date": "2026-06-24T01:29:26.381Z",
