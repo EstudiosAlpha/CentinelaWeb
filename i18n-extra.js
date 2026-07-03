@@ -5,6 +5,8 @@
     ["Conecta la app con servidores TAK, red local CoT y paquetes Meshtastic compatibles.", "Connect the app with TAK servers, local CoT networking, and compatible Meshtastic packages.", "Collega l'app a server TAK, rete locale CoT e pacchetti Meshtastic compatibili.", "Connectez l'app aux serveurs TAK, au reseau local CoT et aux paquets Meshtastic compatibles.", "Ligue a app a servidores TAK, rede local CoT e pacotes Meshtastic compativeis."],
     ["Georreferenciar", "Georeference", "Georeferenzia", "Georeferencer", "Georreferenciar"],
     ["Superpone imágenes o PDF sobre el mapa, ajusta sus esquinas y guárdalos como KMZ.", "Overlay images or PDFs on the map, adjust their corners, and save them as KMZ.", "Sovrapponi immagini o PDF sulla mappa, regola gli angoli e salvali come KMZ.", "Superposez des images ou des PDF sur la carte, ajustez leurs angles et enregistrez-les en KMZ.", "Sobreponha imagens ou PDF no mapa, ajuste os cantos e guarde-os como KMZ."],
+    ["Geozonas", "Geozones", "Geozone", "Geozones", "Geozonas"],
+    ["Crea geozonas sobre el mapa, define perímetros operativos y consulta avisos al entrar o salir.", "Create geozones on the map, define operational perimeters, and check alerts when entering or leaving.", "Crea geozone sulla mappa, definisci perimetri operativi e consulta gli avvisi in entrata o in uscita.", "Creez des geozones sur la carte, definissez des perimetres operationnels et consultez les alertes a l'entree ou a la sortie.", "Crie geozonas no mapa, defina perimetros operacionais e consulte avisos ao entrar ou sair."],
   ];
 
   const dictionaries = rows.reduce((acc, [es, en, it, fr, pt]) => {
