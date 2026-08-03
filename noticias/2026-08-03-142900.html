@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f5ef" />
+  <title>Centinela 1.5 | Noticias · Centinela: Navegación Táctica</title>
+  <meta name="description" content="Esta actualización ajusta el ciclo de ubicación, mejora la importación y exportación de waypoints y corrige cómo se interpretan las rutas KML con puntos auxiliares. 🔄Mejorado ▶️Ubicación: la app so…" />
+  <meta property="og:title" content="Centinela 1.5 | Noticias · Centinela: Navegación Táctica" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/images/centinela-app-icon.png" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="icon" href="../assets/images/centinela-app-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+<header class="site-header">
+  <nav class="nav shell" aria-label="Navegación principal">
+    <a class="brand" href="../index.html#inicio" aria-label="Centinela, inicio">
+      <img src="../assets/images/centinela-app-icon.png" alt="" />
+      <span>Centinela</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+      <span class="visually-hidden">Abrir menú</span>
+    </button>
+    <div class="nav-links" id="primary-navigation">
+      <a href="../especificaciones.html">Especificaciones</a>
+      <a href="../tutoriales.html">Tutoriales</a>
+      <a href="../noticias.html" aria-current="page">Noticias</a>
+      <a href="../privacidad.html">Privacidad</a>
+      <a href="../soporte.html">Soporte</a>
+    </div>
+  </nav>
+</header>
+  <main id="contenido">
+    <section class="spec-hero privacy-hero" aria-labelledby="page-title">
+  <canvas id="tactical-grid" class="tactical-grid" aria-hidden="true"></canvas>
+  <div class="hero-map" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="shell spec-hero-layout">
+    <p class="eyebrow">Noticias · 3 de agosto de 2026</p>
+    <h1 id="page-title">Centinela 1.5</h1>
+    
+  </div>
+</section>
+    <section class="section privacy-content">
+      <div class="shell privacy-layout">
+        <article class="spec-card privacy-card">
+          
+          <div data-lang-block="es">
+            <p>Esta actualización ajusta el ciclo de ubicación, mejora la importación y exportación de waypoints y corrige cómo se interpretan las rutas KML con puntos auxiliares.</p>
+            <p>🔄Mejorado</p>
+            <p>▶️Ubicación: la app solo comparte ubicación durante la sesión activa y deja de usar cambios significativos para evitar relanzamientos no deseados tras cerrar la app.<br>▶️Waypoints GPX: las listas importadas conservan su nombre y se crean como listas visibles; la exportación mantiene nombre de lista, descripción, altitud e iconos por afiliación SIDC.<br>▶️Paquetes de datos: al importar waypoints desde archivos se conserva la lista de origen y queda visible automáticamente.<br>▶️Rutas KML: se priorizan geometrías <code>LineString</code> frente a puntos auxiliares para evitar que marcadores o hitos se conviertan en vértices de ruta.</p>
+            <p>🌍Localización</p>
+            <p>▶️Añadidas traducciones para textos de Geozonas en inglés, francés, italiano y portugués.</p>
+            <p>🏷️Versión</p>
+            <p>▶️Targets iOS, watchOS y complicación actualizados a 1.5.</p>
+          </div>
+          <div data-lang-block="en" hidden>
+            <p>This update refines the location cycle, improves waypoint import and export, and fixes how KML routes with auxiliary points are interpreted.</p>
+            <p>🔄Improved</p>
+            <p>▶️Location: the app only shares location during an active session and no longer uses significant-change updates, preventing unwanted relaunches after the app is closed.<br>▶️GPX waypoints: imported lists keep their name and are created as visible lists; export preserves the list name, description, altitude, and icons by SIDC affiliation.<br>▶️Data packages: importing waypoints from files keeps the source list, which becomes visible automatically.<br>▶️KML routes: <code>LineString</code> geometries now take priority over auxiliary points, so markers or milestones are no longer turned into route vertices.</p>
+            <p>🌍Localization</p>
+            <p>▶️Added translations for Geofence texts in English, French, Italian, and Portuguese.</p>
+            <p>🏷️Version</p>
+            <p>▶️iOS, watchOS, and complication targets updated to 1.5.</p>
+          </div>
+          <div data-lang-block="it" hidden>
+            <p>Questo aggiornamento perfeziona il ciclo di posizione, migliora l'importazione e l'esportazione dei waypoint e corregge l'interpretazione delle rotte KML con punti ausiliari.</p>
+            <p>🔄Migliorato</p>
+            <p>▶️Posizione: l'app condivide la posizione solo durante la sessione attiva e non usa piu gli aggiornamenti a cambiamento significativo, evitando riavvii indesiderati dopo la chiusura dell'app.<br>▶️Waypoint GPX: gli elenchi importati mantengono il proprio nome e vengono creati come elenchi visibili; l'esportazione conserva nome dell'elenco, descrizione, altitudine e icone per affiliazione SIDC.<br>▶️Pacchetti dati: importando i waypoint dai file viene conservato l'elenco di origine, che diventa visibile automaticamente.<br>▶️Rotte KML: le geometrie <code>LineString</code> hanno priorita sui punti ausiliari, cosi marker o segnaposto non vengono piu convertiti in vertici della rotta.</p>
+            <p>🌍Localizzazione</p>
+            <p>▶️Aggiunte le traduzioni dei testi delle Geozone in inglese, francese, italiano e portoghese.</p>
+            <p>🏷️Versione</p>
+            <p>▶️Target iOS, watchOS e complicazione aggiornati alla 1.5.</p>
+          </div>
+          <div data-lang-block="fr" hidden>
+            <p>Cette mise a jour affine le cycle de localisation, ameliore l'import et l'export des waypoints et corrige l'interpretation des itineraires KML comportant des points auxiliaires.</p>
+            <p>🔄Ameliore</p>
+            <p>▶️Position : l'app ne partage la position que pendant la session active et n'utilise plus les changements significatifs, ce qui evite les relancements indesirables apres la fermeture de l'app.<br>▶️Waypoints GPX : les listes importees conservent leur nom et sont creees comme listes visibles ; l'export conserve le nom de la liste, la description, l'altitude et les icones par affiliation SIDC.<br>▶️Paquets de donnees : lors de l'import de waypoints depuis des fichiers, la liste d'origine est conservee et devient visible automatiquement.<br>▶️Itineraires KML : les geometries <code>LineString</code> sont prioritaires sur les points auxiliaires, afin que les marqueurs ou reperes ne soient plus transformes en sommets d'itineraire.</p>
+            <p>🌍Localisation</p>
+            <p>▶️Ajout des traductions des textes des Geozones en anglais, francais, italien et portugais.</p>
+            <p>🏷️Version</p>
+            <p>▶️Targets iOS, watchOS et complication mis a jour en 1.5.</p>
+          </div>
+          <div data-lang-block="pt" hidden>
+            <p>Esta atualizacao ajusta o ciclo de localizacao, melhora a importacao e exportacao de waypoints e corrige a forma como sao interpretadas as rotas KML com pontos auxiliares.</p>
+            <p>🔄Melhorado</p>
+            <p>▶️Posicao: a app so partilha a posicao durante a sessao ativa e deixa de usar as alteracoes significativas de localizacao, evitando reinicios indesejados depois de fechar a app.<br>▶️Waypoints GPX: as listas importadas mantem o seu nome e sao criadas como listas visiveis; a exportacao mantem o nome da lista, a descricao, a altitude e os icones por afiliacao SIDC.<br>▶️Pacotes de dados: ao importar waypoints a partir de ficheiros, a lista de origem e mantida e fica visivel automaticamente.<br>▶️Rotas KML: as geometrias <code>LineString</code> passam a ter prioridade sobre os pontos auxiliares, para que marcadores ou marcos deixem de ser convertidos em vertices da rota.</p>
+            <p>🌍Localizacao</p>
+            <p>▶️Adicionadas traducoes para os textos de Geozonas em ingles, frances, italiano e portugues.</p>
+            <p>🏷️Versao</p>
+            <p>▶️Targets iOS, watchOS e complicacao atualizados para 1.5.</p>
+          </div>
+          <p style="margin-top:1.5rem"><a href="../noticias.html">← Todas las noticias</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer" id="contacto">
+  <div class="shell footer-grid">
+    <div>
+      <strong>Centinela: Navegación Táctica</strong>
+      <p>© <span id="copyright-year"></span> Centinela. Todos los derechos reservados.</p>
+      <div class="social-links">
+      <a href="https://discord.gg/tJdQnWvt" target="_blank" rel="noopener" aria-label="Discord de Centinela"><img src="../assets/icons/discord.svg" alt="Discord" /></a>
+      <a href="https://whatsapp.com/channel/0029VbD3IBv2ZjCs3SlrxM1f" target="_blank" rel="noopener" aria-label="Canal de WhatsApp de Centinela"><img src="../assets/icons/whatsapp.svg" alt="WhatsApp" /></a>
+    </div>
+    </div>
+    <nav aria-label="Enlaces de pie de página">
+      <a href="../especificaciones.html">Especificaciones</a>
+      <a href="../tutoriales.html">Tutoriales</a>
+      <a href="../noticias.html">Noticias</a>
+      <a href="../privacidad.html">Privacidad</a>
+      <a href="../soporte.html">Soporte</a>
+      <a href="https://discord.gg/jWzjWPPz" target="_blank" rel="noopener">Discord</a>
+    </nav>
+  </div>
+</footer>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>

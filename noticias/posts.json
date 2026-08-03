@@ -1,12 +1,21 @@
 [
   {
+    "id": "2026-08-03-142900",
+    "title": "Centinela 1.5",
+    "date": "2026-08-03T12:29:00.000Z",
+    "dateLabel": "3 de agosto de 2026",
+    "file": "2026-08-03-142900.html",
+    "image": null,
+    "excerpt": "Esta actualización ajusta el ciclo de ubicación, mejora la importación y exportación de waypoints y corrige cómo se interpretan las rutas KML con puntos auxiliares. 🔄Mejorado ▶️Ubicación: la app so…"
+  },
+  {
     "id": "2026-07-04-085439",
     "title": "Centinela 1.4",
     "date": "2026-07-04T06:54:39.508Z",
     "dateLabel": "4 de julio de 2026",
     "file": "2026-07-04-085439.html",
     "image": null,
-    "excerpt": "🇪🇸👑 ➕Añadido ▶️Herramienta Geozonas: crea alertas a partir de zonas dibujadas, activa avisos de entrada y salida, filtra objetivos entre usuarios TAK, enemigos o ambos y consulta el historial de cr…"
+    "excerpt": "➕Añadido ▶️Herramienta Geozonas: crea alertas a partir de zonas dibujadas, activa avisos de entrada y salida, filtra objetivos entre usuarios TAK, enemigos o ambos y consulta el historial de cruces…"
   },
   {
     "id": "2026-07-02-090328",
@@ -15,7 +24,7 @@
     "dateLabel": "2 de julio de 2026",
     "file": "2026-07-02-090328.html",
     "image": null,
-    "excerpt": "🇪🇸👑Esta actualización añade la búsqueda de direcciones y lugares, una nueva herramienta para georreferenciar imágenes y documentos, y mejora la experiencia en modo oscuro. ➕Añadido ▶️Herramienta Ir…"
+    "excerpt": "Esta actualización añade la búsqueda de direcciones y lugares, una nueva herramienta para georreferenciar imágenes y documentos, y mejora la experiencia en modo oscuro. ➕Añadido ▶️Herramienta Ir: b…"
   },
   {
     "id": "2026-06-26-174635",
@@ -24,7 +33,7 @@
     "dateLabel": "26 de junio de 2026",
     "file": "2026-06-26-174635.html",
     "image": null,
-    "excerpt": "🇪🇸👑Tercera versión de Centinela. Esta actualización añade la conexión con Meshtastic, completa el editor de figuras de dibujo y mejora la robustez de la conexión TAK. ➕Añadido ▶️Conexión con Meshta…"
+    "excerpt": "Tercera versión de Centinela. Esta actualización añade la conexión con Meshtastic, completa el editor de figuras de dibujo y mejora la robustez de la conexión TAK. ➕Añadido ▶️Conexión con Meshtasti…"
   },
   {
     "id": "2026-06-24-032926",
@@ -33,7 +42,7 @@
     "dateLabel": "24 de junio de 2026",
     "file": "2026-06-24-032926.html",
     "image": null,
-    "excerpt": "🇪🇸👑Segunda versión de Centinela. Esta actualización añade nuevos idiomas, permite abrir archivos de mapas, rutas y waypoints directamente desde iPhone, mejora la compatibilidad con servidores TAK o…"
+    "excerpt": "Segunda versión de Centinela. Esta actualización añade nuevos idiomas, permite abrir archivos de mapas, rutas y waypoints directamente desde iPhone, mejora la compatibilidad con servidores TAK ofic…"
   },
   {
     "id": "2026-06-21-105022",
@@ -42,6 +51,6 @@
     "dateLabel": "21 de junio de 2026",
     "file": "2026-06-21-105022.html",
     "image": null,
-    "excerpt": "🇪🇸👑Primera versión pública de Centinela, cliente de navegación táctica para iPhone, iPad y Apple Watch (TAK / Cursor-on-Target). ➕Añadido ▶️Mapa táctico con posición GPS en directo, rumbo/brújula y…"
+    "excerpt": "Primera versión pública de Centinela, cliente de navegación táctica para iPhone, iPad y Apple Watch (TAK / Cursor-on-Target). ➕Añadido ▶️Mapa táctico con posición GPS en directo, rumbo/brújula y po…"
   }
 ]
