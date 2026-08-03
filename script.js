@@ -6,6 +6,18 @@ if (copyrightYear) {
   copyrightYear.textContent = new Date().getFullYear();
 }
 
+const languageBlocks = document.querySelectorAll("[data-lang-block]");
+
+if (languageBlocks.length) {
+  const available = new Set(Array.from(languageBlocks, (block) => block.dataset.langBlock));
+  const pageLanguage = document.documentElement.lang || i18n?.language;
+  const activeLanguage = [pageLanguage, "en", "es"].find((language) => available.has(language));
+
+  languageBlocks.forEach((block) => {
+    block.hidden = block.dataset.langBlock !== activeLanguage;
+  });
+}
+
 const menuToggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelector(".nav-links");
 
