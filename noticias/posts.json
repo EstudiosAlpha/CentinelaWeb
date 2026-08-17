@@ -1,5 +1,14 @@
 [
   {
+    "id": "2026-08-17-213400",
+    "title": "Centinela 1.6",
+    "date": "2026-08-17T19:34:00.000Z",
+    "dateLabel": "17 de agosto de 2026",
+    "file": "2026-08-17-213400.html",
+    "image": null,
+    "excerpt": "Esta actualización añade la descarga de mapas offline y mejora la integración con Meshtastic. ➕Añadido ▶️Descarga de mapas offline: selector rectangular sobre el mapa para acotar la zona, con fuent…"
+  },
+  {
     "id": "2026-08-03-142900",
     "title": "Centinela 1.5",
     "date": "2026-08-03T12:29:00.000Z",
