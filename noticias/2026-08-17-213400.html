@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f7f5ef" />
+  <title>Centinela 1.6 | Noticias · Centinela: Navegación Táctica</title>
+  <meta name="description" content="Esta actualización añade la descarga de mapas offline y mejora la integración con Meshtastic. ➕Añadido ▶️Descarga de mapas offline: selector rectangular sobre el mapa para acotar la zona, con fuent…" />
+  <meta property="og:title" content="Centinela 1.6 | Noticias · Centinela: Navegación Táctica" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="../assets/images/centinela-app-icon.png" />
+  <meta property="og:locale" content="es_ES" />
+  <link rel="icon" href="../assets/images/centinela-app-icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="../assets/icons/apple-touch-icon.png" />
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+<header class="site-header">
+  <nav class="nav shell" aria-label="Navegación principal">
+    <a class="brand" href="../index.html#inicio" aria-label="Centinela, inicio">
+      <img src="../assets/images/centinela-app-icon.png" alt="" />
+      <span>Centinela</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+      <span class="visually-hidden">Abrir menú</span>
+    </button>
+    <div class="nav-links" id="primary-navigation">
+      <a href="../especificaciones.html">Especificaciones</a>
+      <a href="../tutoriales.html">Tutoriales</a>
+      <a href="../noticias.html" aria-current="page">Noticias</a>
+      <a href="../privacidad.html">Privacidad</a>
+      <a href="../soporte.html">Soporte</a>
+    </div>
+  </nav>
+</header>
+  <main id="contenido">
+    <section class="spec-hero privacy-hero" aria-labelledby="page-title">
+  <canvas id="tactical-grid" class="tactical-grid" aria-hidden="true"></canvas>
+  <div class="hero-map" aria-hidden="true"></div>
+  <div class="scanline" aria-hidden="true"></div>
+  <div class="shell spec-hero-layout">
+    <p class="eyebrow">Noticias · 17 de agosto de 2026</p>
+    <h1 id="page-title">Centinela 1.6</h1>
+    
+  </div>
+</section>
+    <section class="section privacy-content">
+      <div class="shell privacy-layout">
+        <article class="spec-card privacy-card">
+          
+          <div data-lang-block="es">
+            <p>Esta actualización añade la descarga de mapas offline y mejora la integración con Meshtastic.</p>
+            <p>➕Añadido</p>
+            <p>▶️Descarga de mapas offline: selector rectangular sobre el mapa para acotar la zona, con fuentes IGN Topográfico, IGN Base y PNOA Ortofoto, niveles de detalle, progreso y cancelación. El resultado se guarda como MBTiles ráster y queda registrado como mapa visible.<br>▶️Requisitos de Meshtastic: nueva sección en Ajustes con la configuración que debe tener la app de Meshtastic para que el equipo llegue a verse.</p>
+            <p>🔄Mejorado</p>
+            <p>▶️Meshtastic (posiciones): el buffer de recepción ya no descarta bloques cuando un carácter UTF-8 queda partido entre dos lecturas TCP, los contactos respetan el <code>stale</code> que anuncia el propio CoT en vez de caducar por tiempo de recepción, y los PLI reenviados por la malla dejan de importarse como waypoints. Requiere firmware 2.8.0 o superior en las radios.<br>▶️Meshtastic (cadencia LoRa): posición cada 30 s, reenvío de objetos escalonado en lugar de repetirse cada 5 s indefinidamente, CoT canónico sin prólogo XML y uid de cliente corto para que quepa en el campo de 48 bytes del protocolo V2.<br>▶️Rutas: crear o grabar una ruta ya no la envía al resto del equipo; se comparte únicamente desde su opción de compartir. Los puntos dejan de parpadear mientras se dibuja la ruta.<br>▶️Dibujos: al editar una figura, el color, la opacidad y el borde se aplican a toda la figura y no solo a su rótulo.<br>▶️Mapa táctico: indicador de conexión simplificado a Conectado/Desconectado y contador de contactos a la vista.</p>
+          </div>
+          <div data-lang-block="en" hidden>
+            <p>This update adds offline map downloads and improves the Meshtastic integration.</p>
+            <p>➕Added</p>
+            <p>▶️Offline map download: rectangular selector on the map to bound the area, with IGN Topographic, IGN Base, and PNOA Orthophoto sources, detail levels, progress, and cancellation. The result is saved as a raster MBTiles file and registered as a visible map.<br>▶️Meshtastic requirements: new section in Settings with the configuration the Meshtastic app must have for the team to become visible.</p>
+            <p>🔄Improved</p>
+            <p>▶️Meshtastic (positions): the receive buffer no longer discards blocks when a UTF-8 character is split across two TCP reads, contacts honor the <code>stale</code> value announced by the CoT itself instead of expiring by reception time, and PLIs relayed by the mesh are no longer imported as waypoints. Requires firmware 2.8.0 or later on the radios.<br>▶️Meshtastic (LoRa cadence): position every 30 s, staggered object rebroadcast instead of repeating every 5 s indefinitely, canonical CoT without the XML prolog, and a short client uid so it fits the 48-byte field of the V2 protocol.<br>▶️Routes: creating or recording a route no longer sends it to the rest of the team; it is shared only from its own share option. Points no longer blink while the route is being drawn.<br>▶️Drawings: when editing a shape, the color, opacity, and border apply to the whole shape and not just to its label.<br>▶️Tactical map: connection indicator simplified to Connected/Disconnected, and a counter of contacts in view.</p>
+          </div>
+          <div data-lang-block="it" hidden>
+            <p>Questo aggiornamento aggiunge il download delle mappe offline e migliora l'integrazione con Meshtastic.</p>
+            <p>➕Aggiunto</p>
+            <p>▶️Download di mappe offline: selettore rettangolare sulla mappa per delimitare l'area, con le fonti IGN Topografico, IGN Base e PNOA Ortofoto, livelli di dettaglio, avanzamento e annullamento. Il risultato viene salvato come MBTiles raster e registrato come mappa visibile.<br>▶️Requisiti di Meshtastic: nuova sezione nelle Impostazioni con la configurazione che l'app Meshtastic deve avere affinche la squadra sia visibile.</p>
+            <p>🔄Migliorato</p>
+            <p>▶️Meshtastic (posizioni): il buffer di ricezione non scarta piu i blocchi quando un carattere UTF-8 viene diviso tra due letture TCP, i contatti rispettano lo <code>stale</code> annunciato dal CoT stesso invece di scadere in base al momento della ricezione, e i PLI ritrasmessi dalla rete mesh non vengono piu importati come waypoint. Richiede firmware 2.8.0 o successivo sulle radio.<br>▶️Meshtastic (cadenza LoRa): posizione ogni 30 s, ritrasmissione degli oggetti scaglionata invece di ripetersi ogni 5 s all'infinito, CoT canonico senza prologo XML e uid client breve per rientrare nel campo da 48 byte del protocollo V2.<br>▶️Rotte: creare o registrare una rotta non la invia piu al resto della squadra; si condivide solo dalla sua opzione di condivisione. I punti non lampeggiano piu mentre si disegna la rotta.<br>▶️Disegni: durante la modifica di una figura, colore, opacita e bordo si applicano a tutta la figura e non solo alla sua etichetta.<br>▶️Mappa tattica: indicatore di connessione semplificato in Connesso/Disconnesso e contatore dei contatti in vista.</p>
+          </div>
+          <div data-lang-block="fr" hidden>
+            <p>Cette mise a jour ajoute le telechargement de cartes hors ligne et ameliore l'integration avec Meshtastic.</p>
+            <p>➕Ajoute</p>
+            <p>▶️Telechargement de cartes hors ligne : selecteur rectangulaire sur la carte pour delimiter la zone, avec les sources IGN Topographique, IGN Base et PNOA Orthophoto, niveaux de detail, progression et annulation. Le resultat est enregistre au format MBTiles raster et ajoute comme carte visible.<br>▶️Prerequis Meshtastic : nouvelle section dans les Reglages avec la configuration que l'app Meshtastic doit avoir pour que l'equipe soit visible.</p>
+            <p>🔄Ameliore</p>
+            <p>▶️Meshtastic (positions) : le tampon de reception ne rejette plus les blocs lorsqu'un caractere UTF-8 est coupe entre deux lectures TCP, les contacts respectent le <code>stale</code> annonce par le CoT lui-meme au lieu d'expirer selon l'heure de reception, et les PLI relayes par le maillage ne sont plus importes comme waypoints. Necessite le firmware 2.8.0 ou superieur sur les radios.<br>▶️Meshtastic (cadence LoRa) : position toutes les 30 s, reemission des objets echelonnee au lieu de se repeter toutes les 5 s indefiniment, CoT canonique sans prologue XML et uid client court pour tenir dans le champ de 48 octets du protocole V2.<br>▶️Itineraires : creer ou enregistrer un itineraire ne l'envoie plus au reste de l'equipe ; il se partage uniquement depuis son option de partage. Les points ne clignotent plus pendant le trace de l'itineraire.<br>▶️Dessins : lors de la modification d'une figure, la couleur, l'opacite et la bordure s'appliquent a toute la figure et non seulement a son etiquette.<br>▶️Carte tactique : indicateur de connexion simplifie en Connecte/Deconnecte et compteur de contacts visibles.</p>
+          </div>
+          <div data-lang-block="pt" hidden>
+            <p>Esta atualizacao adiciona a transferencia de mapas offline e melhora a integracao com o Meshtastic.</p>
+            <p>➕Adicionado</p>
+            <p>▶️Transferencia de mapas offline: seletor retangular sobre o mapa para delimitar a zona, com as fontes IGN Topografico, IGN Base e PNOA Ortofoto, niveis de detalhe, progresso e cancelamento. O resultado e guardado como MBTiles raster e fica registado como mapa visivel.<br>▶️Requisitos do Meshtastic: nova seccao nas Definicoes com a configuracao que a app Meshtastic deve ter para que a equipa fique visivel.</p>
+            <p>🔄Melhorado</p>
+            <p>▶️Meshtastic (posicoes): o buffer de rececao deixa de descartar blocos quando um caracter UTF-8 fica dividido entre duas leituras TCP, os contactos respeitam o <code>stale</code> anunciado pelo proprio CoT em vez de expirarem pelo momento da rececao, e os PLI reencaminhados pela malha deixam de ser importados como waypoints. Requer firmware 2.8.0 ou superior nas radios.<br>▶️Meshtastic (cadencia LoRa): posicao a cada 30 s, reenvio de objetos escalonado em vez de se repetir a cada 5 s indefinidamente, CoT canonico sem prologo XML e uid de cliente curto para caber no campo de 48 bytes do protocolo V2.<br>▶️Rotas: criar ou gravar uma rota deixa de a enviar ao resto da equipa; passa a partilhar-se apenas a partir da sua opcao de partilha. Os pontos deixam de piscar enquanto se desenha a rota.<br>▶️Desenhos: ao editar uma figura, a cor, a opacidade e o contorno aplicam-se a toda a figura e nao apenas ao seu rotulo.<br>▶️Mapa tatico: indicador de ligacao simplificado para Ligado/Desligado e contador de contactos a vista.</p>
+          </div>
+          <p style="margin-top:1.5rem"><a href="../noticias.html">← Todas las noticias</a></p>
+        </article>
+      </div>
+    </section>
+  </main>
+<footer class="site-footer" id="contacto">
+  <div class="shell footer-grid">
+    <div>
+      <strong>Centinela: Navegación Táctica</strong>
+      <p>© <span id="copyright-year"></span> Centinela. Todos los derechos reservados.</p>
+      <div class="social-links">
+      <a href="https://discord.gg/tJdQnWvt" target="_blank" rel="noopener" aria-label="Discord de Centinela"><img src="../assets/icons/discord.svg" alt="Discord" /></a>
+      <a href="https://whatsapp.com/channel/0029VbD3IBv2ZjCs3SlrxM1f" target="_blank" rel="noopener" aria-label="Canal de WhatsApp de Centinela"><img src="../assets/icons/whatsapp.svg" alt="WhatsApp" /></a>
+    </div>
+    </div>
+    <nav aria-label="Enlaces de pie de página">
+      <a href="../especificaciones.html">Especificaciones</a>
+      <a href="../tutoriales.html">Tutoriales</a>
+      <a href="../noticias.html">Noticias</a>
+      <a href="../privacidad.html">Privacidad</a>
+      <a href="../soporte.html">Soporte</a>
+      <a href="https://discord.gg/jWzjWPPz" target="_blank" rel="noopener">Discord</a>
+    </nav>
+  </div>
+</footer>
+<script src="../i18n.js"></script>
+<script src="../script.js"></script>
+</body>
+</html>
