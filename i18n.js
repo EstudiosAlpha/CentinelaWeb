@@ -255,7 +255,6 @@
     ["Noticias", "News", "Notizie", "Actualites", "Noticias"],
     ["Soporte", "Support", "Supporto", "Assistance", "Suporte"],
     ["Discord de Centinela", "Centinela Discord", "Discord di Centinela", "Discord de Centinela", "Discord do Centinela"],
-    ["Canal de WhatsApp de Centinela", "Centinela WhatsApp channel", "Canale WhatsApp di Centinela", "Chaine WhatsApp de Centinela", "Canal de WhatsApp do Centinela"],
     ["Descargar Centinela en el App Store", "Download Centinela on the App Store", "Scarica Centinela dall'App Store", "Telecharger Centinela sur l'App Store", "Descarregar o Centinela na App Store"],
     ["Consíguelo en el App Store", "Get it on the App Store", "Disponibile su App Store", "Disponible sur l'App Store", "Disponivel na App Store"],
     ["Ya disponible", "Now available", "Ora disponibile", "Desormais disponible", "Ja disponivel"],
